@@ -3,7 +3,7 @@
   'use strict';
 
   /* ===== SETUP: paste your Formspree form id here so enquiries reach the owner's email ===== */
-  var FORM_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+  var FORM_ENDPOINT = 'https://formspree.io/f/mrpevjqo';
   /* ========================================================================================= */
 
   var calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -123,15 +123,23 @@
       e.preventDefault();
       var data = {}; new FormData(form).forEach(function (v, k) { data[k] = v; });
       if (data._gotcha) return;
-      if (FORM_ENDPOINT.indexOf('YOUR_FORM_ID') > -1) { show('err', 'Form setup pending: add the Formspree form id in js/school.js so enquiries reach the owner\u2019s email. Meanwhile, please call +91 72991 11991.'); return; }
       btn.disabled = true; btn.textContent = 'Sending\u2026';
       data._subject = 'New enquiry: ' + data.instrument + ' (' + data.mode + ') from ' + data.name;
       fetch(FORM_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(data) })
         .then(function (r) {
-          if (r.ok) { form.reset(); show('ok', 'Thank you, ' + data.name + '. Your enquiry has reached us and we will contact you soon.'); }
-          else { show('err', 'The enquiry did not send. Please try again or call +91 72991 11991.'); }
+          return r.json().then(function (result) {
+            if (r.ok) { form.reset(); show('ok', 'Thank you, ' + data.name + '. Your enquiry has reached us and we will contact you soon.'); }
+            else {
+              var errors = result.errors || [];
+              var detail = errors.map(function (error) { return error.message; }).filter(Boolean).join(' ');
+              show('err', 'Formspree rejected the enquiry (HTTP ' + r.status + '). ' + (detail || 'Check that the form ID is correct and the form is active.') + ' Please call +91 72991 11991 if needed.');
+            }
+          }, function () {
+            if (r.ok) { form.reset(); show('ok', 'Thank you, ' + data.name + '. Your enquiry has reached us and we will contact you soon.'); }
+            else { show('err', 'Formspree rejected the enquiry (HTTP ' + r.status + '). Check that the form ID is correct and the form is active, or call +91 72991 11991.'); }
+          });
         })
-        .catch(function () { show('err', 'The enquiry did not send. Check your connection or call +91 72991 11991.'); })
+        .catch(function () { show('err', 'Could not reach Formspree. Check the internet connection and try again from the hosted website, or call +91 72991 11991.'); })
         .then(function () { btn.disabled = false; btn.textContent = 'Send enquiry'; });
     });
   }
