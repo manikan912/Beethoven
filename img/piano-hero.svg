@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 430" role="img" aria-label="Piano keys and musical notes">
+  <g stroke="#ffffff" stroke-opacity=".35" stroke-width="2">
+    <line x1="70" y1="50" x2="530" y2="50"/><line x1="70" y1="70" x2="530" y2="70"/><line x1="70" y1="90" x2="530" y2="90"/><line x1="70" y1="110" x2="530" y2="110"/><line x1="70" y1="130" x2="530" y2="130"/>
+  </g>
+  <g fill="#d62227" stroke="#d62227" stroke-width="4"><ellipse cx="140" cy="110" rx="13" ry="9" stroke="none"/><line x1="152" y1="110" x2="152" y2="62"/></g>
+  <g fill="#fff" stroke="#fff" stroke-width="4"><ellipse cx="230" cy="90" rx="13" ry="9" stroke="none"/><line x1="242" y1="90" x2="242" y2="42"/></g>
+  <g fill="#d62227" stroke="#d62227" stroke-width="4"><ellipse cx="320" cy="70" rx="13" ry="9" stroke="none"/><line x1="332" y1="70" x2="332" y2="22"/></g>
+  <g fill="#fff" stroke="#fff" stroke-width="4"><ellipse cx="410" cy="100" rx="13" ry="9" stroke="none"/><line x1="422" y1="100" x2="422" y2="52"/></g>
+  <g fill="#d62227" stroke="#d62227" stroke-width="4"><ellipse cx="490" cy="80" rx="13" ry="9" stroke="none"/><line x1="502" y1="80" x2="502" y2="32"/></g>
+  <circle cx="90" cy="30" r="5" fill="#35d07f"/><circle cx="560" cy="120" r="6" fill="#4d8bff"/><circle cx="40" cy="150" r="6" fill="#d62227"/>
+  <rect x="40" y="190" width="520" height="60" rx="18" fill="#44413e"/>
+  <rect x="40" y="226" width="520" height="8" fill="#d62227"/>
+  <rect x="60" y="250" width="480" height="150" rx="10" fill="#fff"/>
+  <g stroke="#b3aea8" stroke-width="2"><line x1="120" y1="250" x2="120" y2="400"/><line x1="180" y1="250" x2="180" y2="400"/><line x1="240" y1="250" x2="240" y2="400"/><line x1="300" y1="250" x2="300" y2="400"/><line x1="360" y1="250" x2="360" y2="400"/><line x1="420" y1="250" x2="420" y2="400"/><line x1="480" y1="250" x2="480" y2="400"/></g>
+  <rect x="100" y="250" width="40" height="90" rx="5" fill="#262523"/><rect x="160" y="250" width="40" height="90" rx="5" fill="#262523"/>
+  <rect x="280" y="250" width="40" height="90" rx="5" fill="#262523"/><rect x="340" y="250" width="40" height="90" rx="5" fill="#262523"/><rect x="400" y="250" width="40" height="90" rx="5" fill="#262523"/>
+  <rect x="121" y="251" width="58" height="148" fill="#d62227" opacity="0"><animate attributeName="opacity" values="0;.9;0;0" dur="4s" begin="0s" repeatCount="indefinite"/></rect>
+  <rect x="241" y="251" width="58" height="148" fill="#d62227" opacity="0"><animate attributeName="opacity" values="0;0;.9;0;0" dur="4s" begin="1s" repeatCount="indefinite"/></rect>
+  <rect x="361" y="251" width="58" height="148" fill="#d62227" opacity="0"><animate attributeName="opacity" values="0;0;.9;0;0" dur="4s" begin="2s" repeatCount="indefinite"/></rect>
+  <rect x="421" y="251" width="58" height="148" fill="#d62227" opacity="0"><animate attributeName="opacity" values="0;0;.9;0;0" dur="4s" begin="3s" repeatCount="indefinite"/></rect>
+</svg>
