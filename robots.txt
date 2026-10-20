@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://beethovenmusicschool.org/sitemap.xml

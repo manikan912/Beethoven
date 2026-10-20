@@ -353,6 +353,7 @@ Hero section
 	background: #262523;
 }
 
+.hs-item h1,
 .hs-item h2 {
 	color: #fff;
 	font-size: 70px;
@@ -363,6 +364,7 @@ Hero section
 	opacity: 0;
 }
 
+.hs-item h1 span,
 .hs-item h2 span {
 	color: #d62227;
 }
@@ -401,6 +403,7 @@ Hero section
 }
 
 .owl-item.active .hs-item img,
+.owl-item.active .hs-item h1,
 .owl-item.active .hs-item h2,
 .owl-item.active .hs-item p,
 .owl-item.active .hs-item .site-btn,
@@ -414,6 +417,7 @@ Hero section
 	transition: all 0.5s ease 0.2s;
 }
 
+.owl-item.active .hs-item h1,
 .owl-item.active .hs-item h2 {
 	-webkit-transition: all 0.5s ease 0.4s;
 	transition: all 0.5s ease 0.4s;
@@ -1750,6 +1754,7 @@ Responsive
 
 @media only screen and (max-width: 479px) {
 	.section-title h2,
+	.hs-item h1,
 	.hs-item h2,
 	.sub-text h2 {
 		font-size: 36px;

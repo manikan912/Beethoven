@@ -138,11 +138,13 @@
 .sub-list li img{margin-right:24px;padding-right:0}
 .visit-box .section-title{margin-bottom:30px}
 .stat{padding-bottom:10px}
+.gallery-drive-frame{display:block;width:100%;height:min(78vh,900px);min-height:500px;border:0;background:#fff}
 @media(max-width:767px){
   .section-title{margin-bottom:34px}
   .section-title h2{font-size:38px}
-  .hs-item h2{font-size:46px}
+  .hs-item h1,.hs-item h2{font-size:46px}
   .visit-map iframe{min-height:280px;border-radius:28px}
+  .gallery-drive-frame{height:70vh;min-height:420px}
   .hours-table td{padding:14px 4px}
 }
 
