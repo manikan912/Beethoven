@@ -14,6 +14,4 @@ Pages: index.html (home), contact.html (enquiry form + map)
 3. EDIT DETAILS
    - Phone, address, timings, FAQ: index.html and contact.html (search for 72991 and Vanjinathan).
    - Opening hours for the "Open now" badge: HOURS in js/school.js.
-
-4. THEME LICENCE
-   - The footer credit to Colorlib must stay unless you buy a licence (see THEME-LICENSE.txt).
+ 
